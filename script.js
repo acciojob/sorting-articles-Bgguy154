@@ -1,5 +1,5 @@
 //your JS code here. If required.
-document.addEventlistener("DOMContentLoded",function(){
+document.addEventlistener("DOMContentLoaded",function(){
 const ul=document.querySelector("#band");
 
 const bands = ['The Plot in You', 'The Devil Wears Prada',
