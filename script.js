@@ -1,5 +1,6 @@
 //your JS code here. If required.
-const ul=document.querySelector("#uql");
+document.addEventlistener("DOMContentLoded",function(){
+const ul=document.querySelector("#band");
 
 const bands = ['The Plot in You', 'The Devil Wears Prada',
 			   'Pierce the Veil', 'Norma Jean', 'The Bled',
@@ -10,7 +11,7 @@ const bands = ['The Plot in You', 'The Devil Wears Prada',
 const sorted=bands.sort((a,b)=>{
 	const normalise=str=>
 		str.toLowerCase().replace(/^(a |an |the )/i,"");
-	return normalise(a).toLocaleCompare(normalise(b));
+	return normalise(a).localeCompare(normalise(b));
 })
 
 for(let i=0;i<sorted.length;i++){
@@ -18,3 +19,4 @@ for(let i=0;i<sorted.length;i++){
   li.textContent = sorted[i];
   ul.appendChild(li);
 }
+})
